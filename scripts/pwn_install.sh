@@ -15,10 +15,10 @@ echo "Installing binwalk"
 sudo apt install -y binwalk
 
 echo "Installing pwninit"
-sudo apt-get install-y libssl-dev lzma-dev
+sudo apt-get install-y libssl-dev lzma-dev patchelf
 cargo install pwninit
 
-if echo $SHELL | grep "zsh" 
+if echo $SHELL | grep "zsh"
 then
     RC_LOCATION=$HOME/.zshrc
 else
