@@ -22,7 +22,7 @@ sudo $python_version -m pip install virtualenvwrapper
 echo "Setting setting virtualenvs directory as $HOME/.virtualenvs"
 
 
-if echo $SHELL | grep "zsh" 
+if echo $SHELL | grep "zsh"
 then
     RC_LOCATION=$HOME/.zshrc
 else
@@ -32,4 +32,5 @@ echo "export WORKON_HOME=\$HOME/.virtualenvs" >> $RC_LOCATION
 echo "export PROJECT_HOME=\$HOME/Devel" >> $RC_LOCATION
 echo "export VIRTUALENVWRAPPER_PYTHON=$(which $python_version)" >> $RC_LOCATION
 echo "export PATH=/usr/local/bin:\$PATH" >> $RC_LOCATION
+echo "source /usr/local/bin/virtualenvwrapper.sh" >> $RC_LOCATION
 source RC_LOCATION
